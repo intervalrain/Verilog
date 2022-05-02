@@ -1,0 +1,48 @@
+#! /usr/local/Cellar/icarus-verilog/11.0/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/local/Cellar/icarus-verilog/11.0/lib/ivl/system.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/11.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/11.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/11.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/11.0/lib/ivl/va_math.vpi";
+S_0x7fd6517046e0 .scope module, "lab1" "lab1" 2 3;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "x0";
+    .port_info 1 /INPUT 1 "x1";
+    .port_info 2 /INPUT 1 "x2";
+    .port_info 3 /INPUT 1 "x3";
+    .port_info 4 /INPUT 1 "x4";
+    .port_info 5 /OUTPUT 1 "F";
+o0x7fd652032188 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x600003ee8230 .functor NOT 1, o0x7fd652032188, C4<0>, C4<0>, C4<0>;
+o0x7fd652032218 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x600003ee82a0 .functor NOT 1, o0x7fd652032218, C4<0>, C4<0>, C4<0>;
+o0x7fd652032248 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x600003ee8310 .functor NOT 1, o0x7fd652032248, C4<0>, C4<0>, C4<0>;
+L_0x600003ee8380 .functor AND 1, o0x7fd652032188, o0x7fd652032218, L_0x600003ee8310, C4<1>;
+L_0x600003ee83f0 .functor AND 1, L_0x600003ee82a0, o0x7fd652032248, C4<1>, C4<1>;
+o0x7fd6520321e8 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x600003ee8460 .functor AND 1, L_0x600003ee8230, o0x7fd6520321e8, C4<1>, C4<1>;
+L_0x600003ee84d0 .functor AND 1, L_0x600003ee8230, o0x7fd652032248, C4<1>, C4<1>;
+L_0x600003ee8540 .functor OR 1, L_0x600003ee8380, L_0x600003ee83f0, L_0x600003ee8460, L_0x600003ee84d0;
+v0x6000027e81b0_0 .net "F", 0 0, L_0x600003ee8540;  1 drivers
+v0x6000027e8240_0 .net "not_x0", 0 0, L_0x600003ee8230;  1 drivers
+v0x6000027e82d0_0 .net "not_x3", 0 0, L_0x600003ee82a0;  1 drivers
+v0x6000027e8360_0 .net "not_x4", 0 0, L_0x600003ee8310;  1 drivers
+v0x6000027e83f0_0 .net "p1", 0 0, L_0x600003ee8380;  1 drivers
+v0x6000027e8480_0 .net "p2", 0 0, L_0x600003ee83f0;  1 drivers
+v0x6000027e8510_0 .net "p3", 0 0, L_0x600003ee8460;  1 drivers
+v0x6000027e85a0_0 .net "p4", 0 0, L_0x600003ee84d0;  1 drivers
+v0x6000027e8630_0 .net "x0", 0 0, o0x7fd652032188;  0 drivers
+o0x7fd6520321b8 .functor BUFZ 1, C4<z>; HiZ drive
+v0x6000027e86c0_0 .net "x1", 0 0, o0x7fd6520321b8;  0 drivers
+v0x6000027e8750_0 .net "x2", 0 0, o0x7fd6520321e8;  0 drivers
+v0x6000027e87e0_0 .net "x3", 0 0, o0x7fd652032218;  0 drivers
+v0x6000027e8870_0 .net "x4", 0 0, o0x7fd652032248;  0 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "lab1.v";

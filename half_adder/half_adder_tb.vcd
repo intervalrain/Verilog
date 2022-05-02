@@ -1,0 +1,42 @@
+$date
+	Tue May  3 00:19:03 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module half_adder_tb $end
+$var reg 1 ! A $end
+$var reg 1 " B $end
+$scope module uut $end
+$var wire 1 ! a $end
+$var wire 1 " b $end
+$var wire 1 # carry $end
+$var wire 1 $ sum $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0$
+0#
+0"
+0!
+$end
+#20
+1$
+1!
+#40
+0$
+1#
+1"
+#60
+1$
+0#
+0!
+#80
+0$
+0"
+#100
