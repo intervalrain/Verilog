@@ -1,5 +1,5 @@
-1. 完成 RTL (sample.v)
-2. 完成 test bench (sample_tb.v)
-
-3. `iverilog -o sample_tb.vvp sample_tb.v`
-4. `vvp sample_tb.vvp`
+1. write module (*.v)
+2. write test bench (*_tb.v)
+3. command `iverilog -o *_tb.vvp *_tb.v`
+4. command `vvp *_tb.vvp`
+5. open gtkwave and run test.
