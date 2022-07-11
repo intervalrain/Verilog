@@ -1,6 +1,6 @@
 `include "u7442.v"
 
-module f124(
+module f479(
     input a,
     input b,
     input c,
@@ -11,7 +11,7 @@ module f124(
 
     u7442 u1(a,b,c,d,o);
 
-    assign f1 = ~(o[1] & o[2] & o[4]);
+    assign f1 = ~(o[4] & o[7] & o[9]);
 
 endmodule
 
